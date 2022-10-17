@@ -1,1 +1,3 @@
-# Telephone-directory
+# TELEPHONE-DIRECTORY
+
+Telephone directory using flask
