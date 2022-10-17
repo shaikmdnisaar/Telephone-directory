@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+
+<style type="text/css">
+h1{
+	background-color:lightgreen;
+	color:black;
+	font-family: inherit;
+    }
+h2{
+	background-color:orange;
+	color: black;
+	font-family: italic;
+}
+h3{
+	color: blue;
+	font-family: bold;
+}
+div{
+	height: 50%;
+	width: 50%;
+	background-color: blue;
+	color: white;
+}
+form{
+	background-color: lightblue;
+	height: 50%;
+	width: 50%;
+	color: black;
+}
+h4{
+	background-color: black;
+	color:white;
+	font-family:bold;
+	text-align: center;
+	height: 50%;
+	width: 50%;
+}
+</style>
+<h1></h1>
+
+
+
+{% extends "index.html" %}
+{% block content %}
+<center>
+	<h1 > This Search page</h1>
+<h2> Search Here! </h2>
+<form action="{{ url_for('search') }}"method='post'>
+<center>
+Search_Name: <input type="text" name="Name"><br><br>
+<input type="Submit" value ="Enter">
+
+{% for Name,MobileNo in database.items() %}
+{% if Search_Name==Name %} <br><br>
+		<h4>Name: {{ Name }}<br><br>
+		Mobile_Number: {{ MobileNo }}</h4>
+{% endif %}
+{% endfor %}
+{% endblock %}
+
+</center>
+</form>

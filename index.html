@@ -1,0 +1,38 @@
+
+<style type="text/css">
+	ul{
+		background-color: black;
+		color: white;
+		text-align: left;
+}
+a{
+	color: white;
+}
+h5{
+	text-align: center;
+	text-shadow: 30px;
+	background-color: darkred;
+	color: white;
+	line-height: 150px;
+	font-size: xx-large;
+
+}
+
+</style>
+
+
+<ul><li><a href="{{ url_for('index') }}" class="w3-bar-item w3-button  w3-button-primary">Home</a><br></li>
+
+	<li><a href="{{ url_for('add') }}" class="w3-bar-item w3-button">Add Details</a><br></li>
+
+
+      <li><a href="{{ url_for('display')}}" class="w3-bar-item w3-button">Diplay Details</a><br></li>
+
+      <li><a href="{{ url_for('search') }}" class="w3-bar-item w3-button">Search Details</a><br></ul></li>
+      
+      	<i><h5>Telephone Directory</h5></i>
+     
+        
+   
+    {% block content %}
+    {% endblock %}

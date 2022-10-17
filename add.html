@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style type="text/css">
+	body{
+		background-color: lightblue;
+		color: black;
+		font-style: bold;
+
+	}
+	h1{
+		background-color: black;
+		color: white;
+		font-family: italic;
+	}
+	div{
+		background-color: white;
+		color: black;
+		height: 50%;
+		width: 50%;
+	}
+	h2{
+		background-color:green;
+		color:white;
+		font-family: italic;
+	}
+
+</style>
+
+{% extends "index.html" %}
+{% block content %}
+
+<form action ="{{ url_for('add') }}"method='post'>
+	
+<body>
+<center><h2>WELCOME</h2><br><br>
+	<div>
+        <h1><b>Entries!</b></h1>
+		Name : <input type = "text" name="Name"><br><br>
+		MobileNo : <input type = "text" name="MobileNo"><br><br>
+	<button type="submit" class="btn btn-primary">Submit</button>
+
+	</div>
+		</center>
+</form>
+</body>
+{% endblock %}
